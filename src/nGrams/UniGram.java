@@ -29,6 +29,8 @@ public class UniGram extends NGram {
 		for(Language language : Language.values())
 			languageProbs.put(language.getKey(), 0.0);
 		
+		System.out.println("UNIGRAM:");
+		
 		//For each character in the sentence
 		for (char c : formattedSentence.toCharArray()) {
 			String symbol = c + "";

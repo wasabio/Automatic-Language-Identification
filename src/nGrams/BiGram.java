@@ -44,7 +44,9 @@ public class BiGram extends NGram {
 		//Initialize probability of each language
 		for(Language language : Language.values())
 			languageProbs.put(language.getKey(), 0.0);
-			
+		
+		System.out.println("BIGRAM:");
+		
 		//For each 2 characters in the text
 		for(int i = 0; i < formattedSentence.length() - 1; i++)
 		{
@@ -52,7 +54,7 @@ public class BiGram extends NGram {
 			result += "\nBIGRAM: " + symbol + "\n";
 			result += calculateLanguageScores(symbol, languageProbs);
 		}
-				
+		
 		return result + "\nAccording to the bigram model, the sentence is in " + getBestLanguage(languageProbs);
 	}
 }

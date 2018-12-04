@@ -69,7 +69,7 @@ public class TxtParser {
 			for(Entry<String, Double> symbol : alphabet.entrySet())
 				content += "P(" + symbol.getKey() + ") = " + symbol.getValue() + "\n";
 			
-			write(Paths.get("output", name + language + ".txt").toString(), content);
+			write(Paths.get("outputNgrams", name + language + ".txt").toString(), content);
 		}
 	}
 

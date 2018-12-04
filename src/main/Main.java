@@ -1,6 +1,7 @@
 package main;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -33,9 +34,11 @@ public class Main {
 		int i = 1;
 		for(String sentence : sentences)
 		{
+			System.out.println(sentence);
 			String output = unigram.evaluate(sentence);
 			output += bigram.evaluate(sentence);
-			TxtParser.write("out" + i++ + ".txt", output);
+			System.out.println();
+			TxtParser.write(Paths.get("outputSentences", "out" + i++ + ".txt").toString(), output);
 		}
 		
 		unigram.write();

@@ -64,12 +64,16 @@ public abstract class NGram {
 		
 		for (Entry<String, Double> languageProb : languageProbs.entrySet())
 		{
+			System.out.println(languageProb.getKey() + " => " + languageProb.getValue());
 		    if (max == null || languageProb.getValue().compareTo(max.getValue()) > 0)
 		    	max = languageProb;
 		}
 		
 		for(Language l : Language.values())
-			if(max.getKey().equals(l.getKey()))	return l.getLowerCaseValue();
+			if(max.getKey().equals(l.getKey()))	{
+				System.out.println("Result : " + l.getLowerCaseValue());
+				return l.getLowerCaseValue();
+			}
 		
 		return null;
 	}

@@ -1,7 +1,7 @@
 package structure;
 
 public enum Language {
-	FR("FR", "FRENCH"), EN("EN", "ENGLISH");
+	FR("FR", "FRENCH"), EN("EN", "ENGLISH"), OT("OT", "SPANISH"), PR("PR", "PORTUGUESE"), FI("FI", "FINNISH");
 
     private final String key;
     private final String value;
